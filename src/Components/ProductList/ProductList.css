@@ -18,3 +18,28 @@
   font-weight: 600;
   color: #1F1F1F;
 }
+
+.product-list__mobile {
+  display: none;
+}
+
+@media (max-width: 480px) {
+  .product-list {
+    max-height: none;
+    padding: 10px;
+  }
+
+  .product-list__desktop {
+    display: none;
+  }
+
+  .product-list__mobile {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 8px;
+  }
+
+  .product-card {
+    width: 100%;
+  }
+}

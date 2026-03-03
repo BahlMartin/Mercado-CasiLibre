@@ -21,3 +21,36 @@
     color: #00a650;
     font-weight: 500;
 }
+
+@media (max-width: 480px) {
+    .product-card__price-row {
+        flex-wrap: wrap;
+        gap: 4px;
+    }
+
+    .product-card__price {
+        font-size: 16px;
+    }
+
+    .product-card__discount {
+        font-size: 12px;
+    }
+
+    .product-card__old-price {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 320px) {
+    .product-card__price {
+        font-size: 14px;
+    }
+
+    .product-card__discount {
+        font-size: 10px;
+    }
+
+    .product-card__old-price {
+        font-size: 10px;
+    }
+}

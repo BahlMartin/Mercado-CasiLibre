@@ -38,7 +38,7 @@ const Chatbot = () => {
                 <div className="chatbot-window">
                     <ChatHeader title="Ayuda MercadoClone" onClose={toggleChat} />
                     <ChatMessageList messages={messages} />
-                    <ChatOptions options={options} onOptionClick={(opt) => handleOptionClick(opt, navigate)} />
+                    <ChatOptions options={options} onOptionClick={(opt) => handleOptionClick(opt, navigate)} onClose={toggleChat} />
                     <ChatFooter onSendMessage={handleSendMessage} />
                 </div>
             )}

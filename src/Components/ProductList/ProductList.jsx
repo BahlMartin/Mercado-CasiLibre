@@ -12,11 +12,19 @@ export default function ProductList({title,products}) {
         {title}
       </h2>
 
-      <Carousel>
-        {products.map(product => (
-          <ProductCard key={product.id} product={product} />
+      <div className="product-list__desktop">
+        <Carousel>
+          {products.map(product => (
+            <ProductCard key={product.id} product={product} />
+          ))}
+        </Carousel>
+      </div>
+
+      <div className="product-list__mobile">
+        {products.slice(0, 4).map((product, index) => (
+          <ProductCard key={`${product.id}-mobile-${index}`} product={product} />
         ))}
-      </Carousel>
+      </div>
     </section>
   )
 }

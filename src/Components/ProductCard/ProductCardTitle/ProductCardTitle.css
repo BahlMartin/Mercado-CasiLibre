@@ -26,3 +26,17 @@
 .product-card:hover .product-card__title {
     color: #1e90ff;
 }
+
+@media (max-width: 480px) {
+    .product-card__title {
+        font-size: 11px;
+        margin-top: 2px;
+        line-height: 1.2;
+    }
+}
+
+@media (max-width: 320px) {
+    .product-card__title {
+        font-size: 10px;
+    }
+}

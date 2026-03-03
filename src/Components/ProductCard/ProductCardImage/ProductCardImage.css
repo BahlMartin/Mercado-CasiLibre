@@ -14,3 +14,14 @@
     height: 100%;
     object-fit: contain;
 }
+
+@media (max-width: 480px) {
+    .product-card__image-container {
+        height: 120px;
+    }
+
+    .product-card__image {
+        min-height: unset;
+        max-height: 120px;
+    }
+}

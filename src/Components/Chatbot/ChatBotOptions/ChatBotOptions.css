@@ -1,10 +1,36 @@
 .chatbot-options {
-    padding: 10px 20px;
+    position: relative;
+    padding: 24px 20px 10px 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
     background: #f8f9fa;
     border-top: 1px solid #eee;
+}
+
+.close-options-btn {
+    position: absolute;
+    top: 2px;
+    right: 6px;
+    background: transparent;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    line-height: 1;
+    padding: 2px;
+    border-radius: 50%;
+    transition: color 0.2s, background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+}
+
+.close-options-btn:hover {
+    color: #333;
+    background-color: #eee;
 }
 
 .option-btn {
