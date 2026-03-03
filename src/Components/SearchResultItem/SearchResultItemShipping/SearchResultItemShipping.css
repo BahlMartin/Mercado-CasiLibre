@@ -43,12 +43,12 @@
     }
 
     .search-result-item__shipping-badge {
-        font-size: 0.5rem;
+        font-size: 0.6rem;
         padding: 1px 4px;
         border-radius: 2px;
     }
 
     .search-result-item__shipping-badge--free {
-        font-size: 0.55rem;
+        font-size: 0.6rem;
     }
 }
