@@ -1,0 +1,16 @@
+.cart-item-info__name {
+    font-size: 15px;
+    font-weight: 400;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+    transition: color 0.3s ease;
+}
+
+.cart-item-info__link {
+    text-decoration: none;
+}
+
+.cart-item-info__link:hover .cart-item-info__name {
+    color: #4b89ff;
+}

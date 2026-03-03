@@ -1,0 +1,36 @@
+.product-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.product-actions__btn-primary,
+.product-actions__btn-secondary {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 4px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s;
+}
+
+.product-actions__btn-primary {
+    background-color: #3483fa;
+    color: #fff;
+}
+
+.product-actions__btn-primary:hover {
+    background-color: #2968c8;
+}
+
+.product-actions__btn-secondary {
+    background-color: rgba(65, 137, 230, 0.15);
+    color: #3483fa;
+}
+
+.product-actions__btn-secondary:hover {
+    background-color: rgba(65, 137, 230, 0.25);
+}

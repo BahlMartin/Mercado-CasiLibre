@@ -1,0 +1,15 @@
+.search-filter-item {
+    font-size: 0.9rem;
+    color: #666;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.search-filter-item:hover {
+    color: #3483fa;
+}
+
+.search-filter-item--active {
+    color: #333;
+    font-weight: 600;
+}

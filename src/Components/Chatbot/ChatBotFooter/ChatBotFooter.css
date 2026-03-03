@@ -1,0 +1,44 @@
+.chatbot-footer {
+    padding: 15px;
+    border-top: 1px solid #eee;
+    background: white;
+    display: flex;
+    gap: 10px;
+}
+
+.chatbot-footer input {
+    flex: 1;
+    border: 1px solid #ddd;
+    padding: 10px 15px;
+    border-radius: 20px;
+    outline: none;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+}
+
+.chatbot-footer input:focus {
+    border-color: #1e6bee;
+}
+
+.send-btn {
+    background: #1e6bee;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s;
+}
+
+.send-btn:hover {
+    background-color: #1656c5;
+}
+
+.send-btn svg {
+    width: 20px;
+    height: 20px;
+    fill: white;
+}

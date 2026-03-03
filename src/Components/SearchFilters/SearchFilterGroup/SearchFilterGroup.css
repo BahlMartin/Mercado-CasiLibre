@@ -1,0 +1,42 @@
+.search-filter-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-filter-group__header {
+    display: flex;
+    flex-direction: column;
+}
+
+.search-filter-group__title {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #333;
+    margin: 0 0 0.75rem 0;
+    text-transform: capitalize;
+}
+
+.search-filter-group__title--main {
+    margin-bottom: 0px;
+}
+
+.search-filter-group__count {
+    font-size: 0.9rem;
+    color: #999;
+    margin-bottom: 0.5rem;
+}
+
+.search-filter-group__content {
+    display: flex;
+    flex-direction: column;
+}
+
+/* List default styles inside a group */
+.search-filter-group__list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}

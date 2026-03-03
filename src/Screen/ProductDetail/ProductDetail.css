@@ -1,0 +1,111 @@
+/* Contenedor principal de la página, fondo gris claro típico */
+.product-detail {
+    background-color: #ededed;
+    min-height: calc(100vh - 100px);
+    padding: 1.5rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Navegacion superior (Volver y breadcrumbs) */
+.product-detail__nav {
+    width: 100%;
+    max-width: 1180px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+}
+
+.product-detail__btn-back,
+.product-detail__nav-link {
+    background: none;
+    border: none;
+    color: #3483fa;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 0;
+    text-decoration: none;
+    font-family: inherit;
+}
+
+.product-detail__btn-back:hover,
+.product-detail__nav-link:hover {
+    color: #1259c3;
+}
+
+.product-detail__nav-separator {
+    margin: 0 12px;
+    color: #bfbfbf;
+    font-size: 14px;
+}
+
+/* Tarjeta principal que contiene imagen y detalles */
+.product-detail__card {
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
+    max-width: 1180px;
+    width: calc(100% - 2rem);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+}
+
+.product-detail__card-inner {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.product-detail__desktop-row {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .product-detail__card {
+        flex-direction: row;
+        padding: 2rem;
+    }
+
+    .product-detail__desktop-row {
+        flex-direction: row !important;
+    }
+}
+
+/* Sección derecha: Info del producto */
+.product-detail__right {
+    flex: 1;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #eee;
+}
+
+@media (min-width: 768px) {
+    .product-detail__right {
+        border-top: none;
+        padding: 0 2rem;
+        max-width: 450px;
+    }
+}
+
+/* Error state */
+.product-detail__error {
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.product-detail__recommendations {
+    margin-top: 2rem;
+    padding-top: 2rem;
+    border-top: 1px solid #ebebeb;
+}

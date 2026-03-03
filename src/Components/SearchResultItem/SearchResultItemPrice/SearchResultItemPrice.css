@@ -1,0 +1,50 @@
+.search-result-item__price-block {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.search-result-item__price-info {
+    min-height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.search-result-item__original-price {
+    font-size: 0.8rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.search-result-item__price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+.search-result-item__price {
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.search-result-item__discount {
+    font-size: 14px;
+    color: #00a650;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 1px 2px 0;
+    background-color: #e6f7ef;
+}
+
+.search-result-item__installments {
+    font-size: 0.75rem;
+    color: #00a650;
+    margin: 0;
+}
+
+.search-result-item__no-interest {
+    color: #00a650;
+    font-weight: 400;
+}

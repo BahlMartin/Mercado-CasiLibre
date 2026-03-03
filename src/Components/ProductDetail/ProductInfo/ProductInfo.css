@@ -1,0 +1,53 @@
+.product-info__subtitle {
+    font-size: 0.85rem;
+    color: #666;
+    margin-bottom: 0.5rem;
+}
+
+.product-info__rating-star {
+    color: #3483fa;
+}
+
+.product-info__title {
+    font-size: 1.35rem;
+    font-weight: 500;
+    color: #333;
+    margin-bottom: 8px;
+    line-height: 1.25;
+    margin-top: 8px;
+}
+
+.product-info__rating {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 17px;
+}
+
+.product-info__rating-number {
+    font-size: 0.95rem;
+    color: #999;
+}
+
+.product-info__rating-reviews {
+    font-size: 0.85rem;
+    color: #999;
+    margin-left: 2px;
+}
+
+.product-info__price-container {
+    margin-bottom: 17px;
+}
+
+
+.product-info__installments {
+    font-size: 0.95rem;
+    color: #666;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.product-info__installments--highlight {
+    color: #00a650;
+    font-weight: 500;
+}

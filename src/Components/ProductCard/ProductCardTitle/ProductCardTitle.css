@@ -1,0 +1,28 @@
+.product-card__title {
+    font-size: 13px;
+    color: #333;
+    margin-bottom: 2px;
+    font-weight: 500;
+    transition: color 0.18s ease, transform 0.18s ease;
+    line-height: 1.1;
+    padding-right: 2px;
+    padding-left: 2px;
+    margin-top: 5px;
+}
+
+.product-card__title--first {
+    display: block;
+}
+
+.product-card__title--second {
+    display: block;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.product-card__title:hover,
+.product-card:hover .product-card__title {
+    color: #1e90ff;
+}

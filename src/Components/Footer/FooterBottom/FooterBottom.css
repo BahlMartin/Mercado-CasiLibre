@@ -1,0 +1,30 @@
+.nav-footer__bottom {
+    border-top: 1px solid #eee;
+    padding: 20px 10px;
+    background-color: #fff;
+}
+
+.nav-footer__bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-footer__legal-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.nav-footer__legal-links a {
+    font-size: 12px;
+    color: #333;
+    text-decoration: none;
+}
+
+.nav-footer__copyright,
+.nav-footer__address {
+    font-size: 12px;
+    color: #999;
+    margin: 2px 0;
+}

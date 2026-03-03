@@ -1,0 +1,25 @@
+.cart-item-shipping {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 12px;
+    margin-top: 12px;
+    border-top: 1px solid #eee;
+    font-size: 0.7rem;
+    width: 100%;
+}
+
+.cart-item-shipping__label {
+    color: #333;
+    font-weight: 400;
+}
+
+.cart-item-shipping__value {
+    font-weight: 400;
+    color: #333;
+}
+
+.cart-item-shipping__value--free {
+    color: #00a650;
+    font-weight: 500;
+}

@@ -1,0 +1,8 @@
+.summary-total {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin: 12px 0 24px 0;
+}

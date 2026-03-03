@@ -1,0 +1,18 @@
+.search-result-item__badge-container {
+    height: 20px;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+
+.search-result-item__badge {
+    background-color: #ff7733;
+    color: #fff;
+    font-size: 0.6rem;
+    font-weight: 700;
+    padding: 0px 6px;
+    border-radius: 3px;
+    width: fit-content;
+    text-transform: uppercase;
+
+
+}

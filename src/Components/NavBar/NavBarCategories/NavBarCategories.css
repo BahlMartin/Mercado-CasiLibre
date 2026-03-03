@@ -1,0 +1,24 @@
+.navbar__categories-list {
+    display: flex;
+    gap: 18px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar__categories-item {
+    cursor: pointer;
+}
+
+.navbar__text--secondary {
+    font-weight: inherit;
+    color: rgba(0, 0, 0, .8980392157);
+    font-size: 14px;
+}
+
+@media (max-width: 720px) {
+    .navbar__categories-list {
+        gap: 12px;
+        font-size: 14px;
+    }
+}

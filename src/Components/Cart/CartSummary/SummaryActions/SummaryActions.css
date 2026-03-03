@@ -1,0 +1,35 @@
+.summary-actions {
+    display: flex;
+    flex-direction: column;
+}
+
+.summary-actions__button {
+    border: none;
+    border-radius: 6px;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
+}
+
+.summary-actions__button--checkout {
+    background: #3483fa;
+    color: #fff;
+}
+
+.summary-actions__button--checkout:hover {
+    background: #2968c8;
+}
+
+.summary-actions__button--clear {
+    background: none;
+    color: #3483fa;
+    font-size: 14px;
+    margin-top: 16px;
+    padding: 0;
+}
+
+.summary-actions__button--clear:hover {
+    color: #2968c8;
+}

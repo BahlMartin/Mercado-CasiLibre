@@ -1,0 +1,36 @@
+.navbar__subbar {
+    display: flex;
+    align-items: center;
+    padding: 8px 30px;
+    justify-content: space-between;
+}
+
+.navbar__location {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.navbar__location--icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+}
+
+.navbar__location-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar__text--secondary {
+    font-weight: inherit;
+    color: rgba(0, 0, 0, .8980392157);
+    font-size: 14px;
+}
+
+.navbar__text--tertiary {
+    font-weight: 400;
+    color: rgba(0, 0, 0, .55);
+    font-size: 12px;
+}

@@ -1,0 +1,112 @@
+/* Base styles */
+.ui-price {
+    display: flex;
+    flex-direction: column;
+}
+
+.ui-price__row {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+}
+
+/* Card variant (ProductCard) */
+.ui-price--card .ui-price__original {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+    display: block;
+    height: 14px;
+}
+
+.ui-price--card .ui-price__current {
+    margin-top: 2px;
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}
+
+.ui-price--card .ui-price__discount {
+    font-size: 14px;
+    color: #00a650;
+    font-weight: 500;
+}
+
+/* List variant (SearchResultItem) */
+.ui-price--list {
+    gap: 2px;
+}
+
+.ui-price--list .ui-price__main {
+    min-height: 45px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.ui-price--list .ui-price__original {
+    font-size: 0.8rem;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.ui-price--list .ui-price__current {
+    font-size: 1.2rem;
+    font-weight: 400;
+    color: #333;
+}
+
+.ui-price--list .ui-price__discount {
+    font-size: 14px;
+    color: #00a650;
+    font-weight: 600;
+    border-radius: 2px;
+    padding: 1px 2px 0;
+    background-color: #e6f7ef;
+}
+
+.ui-price--list .ui-price__installments {
+    font-size: 0.70rem;
+    color: #00a650;
+    margin: 0;
+    min-height: 18px;
+}
+
+.ui-price--list .ui-price__no-interest {
+    color: #00a650;
+    font-weight: 400;
+}
+
+/* Detail variant (ProductDetail) */
+.ui-price--detail .ui-price__original {
+    font-size: 1rem;
+    color: #999;
+    text-decoration: line-through;
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.ui-price--detail .ui-price__current {
+    font-size: 2.25rem;
+    font-weight: 300;
+    color: #333;
+}
+
+.ui-price--detail .ui-price__discount {
+    font-size: 1.1rem;
+    color: #00a650;
+    font-weight: 400;
+    padding-top: 0.35rem;
+}
+
+.ui-price--detail .ui-price__installments {
+    font-size: 0.95rem;
+    color: #00a650;
+    display: block;
+    margin-top: 0.25rem;
+}
+
+.ui-price--detail .ui-price__no-interest {
+    color: #00a650;
+    font-weight: 500;
+}

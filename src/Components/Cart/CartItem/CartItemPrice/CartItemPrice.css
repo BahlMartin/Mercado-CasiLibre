@@ -1,0 +1,10 @@
+.cart-item-price {
+    text-align: right;
+    min-width: 100px;
+}
+
+.cart-item-price__amount {
+    font-size: 20px;
+    font-weight: 400;
+    color: #333;
+}

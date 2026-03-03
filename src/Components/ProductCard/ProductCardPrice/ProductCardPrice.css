@@ -1,0 +1,23 @@
+.product-card__old-price {
+    font-size: 14px;
+    color: #999;
+    text-decoration: line-through;
+}
+
+.product-card__price-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.product-card__price {
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+}
+
+.product-card__discount {
+    font-size: 14px;
+    color: #00a650;
+    font-weight: 500;
+}

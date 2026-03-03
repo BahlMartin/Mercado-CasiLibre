@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --ml-yellow: #ffe600;
+  --blue-text: rgb(44, 50, 115);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: #ebebeb;
+}
+
+.navbar {
+  width: 100%;
+  background: var(--ml-yellow);
+}
