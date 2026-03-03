@@ -14,3 +14,29 @@
 .cart-item-info__link:hover .cart-item-info__name {
     color: #4b89ff;
 }
+
+.cart-item-info__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.cart-item-info__link {
+    flex: 1;
+}
+
+.cart-item-info__remove-mobile {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+    .cart-item-info__remove-mobile {
+        display: block;
+    }
+}

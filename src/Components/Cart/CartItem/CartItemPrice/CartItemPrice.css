@@ -8,3 +8,9 @@
     font-weight: 400;
     color: #333;
 }
+
+@media (max-width: 480px) {
+    .cart-item-price__amount {
+        font-size: 16px;
+    }
+}

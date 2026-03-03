@@ -29,6 +29,13 @@
     gap: 12px;
 }
 
+.cart-item__actions-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 16px;
+}
+
 .cart-item__price {
     text-align: right;
     min-width: 100px;
@@ -55,7 +62,13 @@
 
     .cart-item__price {
         min-width: auto;
-        text-align: left;
+        text-align: right;
+    }
+
+    .cart-item__actions-wrapper {
+        justify-content: space-between;
         width: 100%;
+        margin-top: 4px;
+        /* un respiro al titulo */
     }
 }

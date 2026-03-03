@@ -18,17 +18,19 @@ export default function CartItem({ item }) {
                 </div>
 
                 <div className="cart-item__info">
-                    <CartItemInfo name={item.name} id={item.id} />
-                    <CartItemControls
-                        quantity={item.quantity}
-                        stock={item.stock}
-                        onUpdate={(amount) => updateQuantity(item.id, amount, item.stock)}
-                        onRemove={() => removeFromCart(item.id)}
-                    />
-                </div>
+                    <CartItemInfo name={item.name} id={item.id} onRemove={() => removeFromCart(item.id)} />
 
-                <div className="cart-item__price">
-                    <CartItemPrice price={item.price * item.quantity} />
+                    <div className="cart-item__actions-wrapper">
+                        <CartItemControls
+                            quantity={item.quantity}
+                            stock={item.stock}
+                            onUpdate={(amount) => updateQuantity(item.id, amount, item.stock)}
+                            onRemove={() => removeFromCart(item.id)}
+                        />
+                        <div className="cart-item__price">
+                            <CartItemPrice price={item.price * item.quantity} />
+                        </div>
+                    </div>
                 </div>
             </div>
 

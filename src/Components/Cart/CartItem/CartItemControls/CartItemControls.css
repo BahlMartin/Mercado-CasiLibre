@@ -47,3 +47,9 @@
     cursor: pointer;
     padding: 0;
 }
+
+@media (max-width: 480px) {
+    .cart-item-controls__remove {
+        display: none;
+    }
+}
