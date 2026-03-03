@@ -55,7 +55,7 @@ export default function ProductDetail() {
             Volver
           </button>
           <span className="product-detail__nav-separator">|</span>
-          <Link to="/" className="product-detail__nav-link">
+          <Link autoFocus to={`/search/${product.category}`} className="product-detail__nav-link">
             {product.category.charAt(0).toUpperCase() + product.category.slice(1)}
           </Link>
         </div>

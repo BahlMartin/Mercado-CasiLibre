@@ -39,6 +39,12 @@
     margin-bottom: 17px;
 }
 
+@media (max-width: 480px) {
+    .product-info__price-container {
+        margin-bottom: 8px;
+    }
+}
+
 
 .product-info__installments {
     font-size: 0.95rem;
