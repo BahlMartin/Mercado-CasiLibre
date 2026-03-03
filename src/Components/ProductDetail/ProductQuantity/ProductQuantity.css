@@ -104,7 +104,18 @@
     font-size: 0.9rem;
 }
 
-@media (max-width: 418px) {
+@media (max-width: 420px) {
+
+
+    .product-quantity__available {
+        flex-basis: 100%;
+        margin-left: 0;
+        margin-top: 4px;
+        font-size: 0.7rem;
+    }
+}
+
+@media (max-width: 400px) {
     .product-quantity__selector {
         flex-wrap: wrap;
     }
