@@ -16,9 +16,17 @@
     font-size: 14px;
 }
 
-@media (max-width: 720px) {
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
     .navbar__categories-list {
-        gap: 12px;
-        font-size: 14px;
+        gap: 10px;
+        font-size: 13px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .navbar__categories-list {
+        display: none;
     }
 }

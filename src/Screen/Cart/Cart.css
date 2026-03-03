@@ -60,8 +60,30 @@
     font-weight: 600;
 }
 
-@media (max-width: 900px) {
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
     .cart-layout {
         grid-template-columns: 1fr;
+    }
+
+    .cart-container {
+        margin: 24px auto;
+        padding: 0 12px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .cart-container {
+        margin: 12px auto;
+        padding: 0 8px;
+    }
+
+    .cart-empty {
+        padding: 30px 16px;
+    }
+
+    .cart-empty__title {
+        font-size: 20px;
     }
 }

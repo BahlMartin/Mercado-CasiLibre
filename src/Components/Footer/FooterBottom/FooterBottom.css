@@ -28,3 +28,19 @@
     color: #999;
     margin: 2px 0;
 }
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .nav-footer__bottom {
+        padding: 14px 12px;
+    }
+
+    .nav-footer__legal-links {
+        gap: 10px;
+    }
+
+    .nav-footer__copyright,
+    .nav-footer__address {
+        font-size: 11px;
+    }
+}

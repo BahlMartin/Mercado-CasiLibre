@@ -57,3 +57,34 @@
         transform: translateY(0) scale(1);
     }
 }
+
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+    .chatbot-window {
+        width: 300px;
+        height: 440px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .chatbot-container {
+        bottom: 12px;
+        right: 12px;
+    }
+
+    .chatbot-fab {
+        width: 50px;
+        height: 50px;
+    }
+
+    .chatbot-window {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+        width: 100%;
+        height: 85vh;
+        border-radius: 16px 16px 0 0;
+    }
+}

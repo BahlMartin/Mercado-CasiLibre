@@ -34,3 +34,28 @@
     min-width: 100px;
     flex-shrink: 0;
 }
+
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+    .cart-item {
+        padding: 16px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .cart-item {
+        padding: 12px;
+        gap: 10px;
+    }
+
+    .cart-item__main {
+        flex-wrap: wrap;
+    }
+
+    .cart-item__price {
+        min-width: auto;
+        text-align: left;
+        width: 100%;
+    }
+}

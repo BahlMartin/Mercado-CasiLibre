@@ -1,0 +1,127 @@
+/* Overlay */
+.mobile-drawer__overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 1100;
+    opacity: 0;
+    transition: opacity 0.25s ease;
+}
+
+.mobile-drawer__overlay--visible {
+    display: block;
+    opacity: 1;
+}
+
+/* Drawer panel */
+.mobile-drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 280px;
+    height: 100dvh;
+    background: #fff;
+    z-index: 1200;
+    transform: translateX(-100%);
+    transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.mobile-drawer--open {
+    transform: translateX(0);
+}
+
+/* Header: avatar + nombre + botón cerrar */
+.mobile-drawer__header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 20px 16px 16px;
+    background: var(--ml-yellow, #ffe600);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+.mobile-drawer__avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.mobile-drawer__username {
+    font-weight: 600;
+    font-size: 16px;
+    color: #333;
+    flex: 1;
+}
+
+.mobile-drawer__close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: #333;
+    padding: 4px;
+    border-radius: 50%;
+    transition: background 0.2s;
+}
+
+.mobile-drawer__close:hover {
+    background: rgba(0, 0, 0, 0.08);
+}
+
+/* Secciones */
+.mobile-drawer__nav,
+.mobile-drawer__user-links {
+    padding: 12px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.mobile-drawer__section-title {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #999;
+    padding: 0 16px;
+    margin: 0 0 6px;
+}
+
+.mobile-drawer__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.mobile-drawer__item {
+    padding: 12px 16px;
+    font-size: 15px;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.mobile-drawer__item:hover {
+    background: #f5f5f5;
+}
+
+/* Solo visible en mobile */
+@media (min-width: 481px) {
+
+    .mobile-drawer,
+    .mobile-drawer__overlay {
+        display: none !important;
+    }
+}

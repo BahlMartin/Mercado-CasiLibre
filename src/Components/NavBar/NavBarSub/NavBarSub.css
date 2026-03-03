@@ -34,3 +34,21 @@
     color: rgba(0, 0, 0, .55);
     font-size: 12px;
 }
+
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+    .navbar__subbar {
+        padding: 8px 14px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .navbar__subbar {
+        padding: 6px 10px;
+    }
+
+    .navbar__location {
+        display: none;
+    }
+}

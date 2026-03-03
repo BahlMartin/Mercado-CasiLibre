@@ -1,21 +1,22 @@
-import React from 'react'
-import { useNavigate, Link } from 'react-router'
+import React, { useState } from 'react'
 import './NavBar.css'
-import SearchBar from '../SearchBar/SearchBar'
-import { FiMapPin } from "react-icons/fi";
-import NavBarTop from './NavBarTop/NavBarTop';
-import NavBarSub from './NavBarSub/NavBarSub';
+import NavBarTop from './NavBarTop/NavBarTop'
+import NavBarSub from './NavBarSub/NavBarSub'
+import MobileDrawer from './MobileDrawer/MobileDrawer'
 
 export default function NavBar() {
-  const navigate = useNavigate()
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false)
 
-  const handleCategoryClick = (category) => {
-    navigate(`/search/${category}`)
-  }
   return (
-    <header className="navbar">
-      <NavBarTop />
-      <NavBarSub />
-    </header>
+    <>
+      <header className="navbar">
+        <NavBarTop onMenuOpen={() => setIsDrawerOpen(true)} />
+        <NavBarSub />
+      </header>
+      <MobileDrawer
+        isOpen={isDrawerOpen}
+        onClose={() => setIsDrawerOpen(false)}
+      />
+    </>
   )
 }

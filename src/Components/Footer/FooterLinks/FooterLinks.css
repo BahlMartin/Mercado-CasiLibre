@@ -31,3 +31,36 @@
 .nav-footer__link:hover {
     color: #333;
 }
+
+/* ── Tablet (768px – 1024px) ─────────────────────────── */
+@media (max-width: 1024px) {
+    .nav-footer__container {
+        padding: 28px 10px;
+        gap: 16px;
+    }
+
+    .nav-footer__column {
+        min-width: 130px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ────────────────────────────────── */
+@media (max-width: 480px) {
+    .nav-footer__container {
+        padding: 20px 12px;
+        gap: 12px;
+    }
+
+    .nav-footer__column {
+        min-width: calc(50% - 8px);
+        flex: 1 1 calc(50% - 8px);
+    }
+
+    .nav-footer__title {
+        font-size: 13px;
+    }
+
+    .nav-footer__link {
+        font-size: 12px;
+    }
+}
