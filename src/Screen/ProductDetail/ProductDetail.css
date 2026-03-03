@@ -110,3 +110,9 @@
     padding-top: 2rem;
     border-top: 1px solid #ebebeb;
 }
+
+@media (max-width: 480px) {
+    .product-detail__nav {
+        margin-left: 10px;
+    }
+}
