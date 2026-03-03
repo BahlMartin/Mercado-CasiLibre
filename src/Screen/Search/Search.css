@@ -64,7 +64,8 @@
     }
 
     .search-screen__results {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
     }
 
     .search-screen__empty {

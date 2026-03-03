@@ -49,6 +49,16 @@ export function useSearchFilters(resultsMatchingSearch) {
         setSearchParams(newParams)
     }
 
+    const clearAllFilters = () => {
+        const newParams = new URLSearchParams(searchParams)
+        newParams.delete('category')
+        newParams.delete('freeShipping')
+        newParams.delete('arrivesToday')
+        newParams.delete('minPrice')
+        newParams.delete('maxPrice')
+        setSearchParams(newParams)
+    }
+
     // Aplico los filtros a los productos base
     const filteredResults = useMemo(() => {
         if (!resultsMatchingSearch) return []
@@ -79,6 +89,7 @@ export function useSearchFilters(resultsMatchingSearch) {
     return {
         filters,
         handleFilterChange,
+        clearAllFilters,
         filteredResults
     }
 }

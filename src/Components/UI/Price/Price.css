@@ -111,7 +111,6 @@
     font-weight: 500;
 }
 
-
 @media (max-width: 480px) {
     .ui-price--card .ui-price__current {
         font-size: 16px;
@@ -124,6 +123,32 @@
     .ui-price--card .ui-price__original {
         font-size: 12px;
         height: 12px;
+    }
+
+    /* Reducciones para la vista de lista (SearchResultItem) en móviles */
+    .ui-price--list {
+        gap: 0;
+    }
+
+    .ui-price--list .ui-price__main {
+        min-height: 25px;
+    }
+
+    .ui-price--list .ui-price__current {
+        font-size: 0.6rem;
+    }
+
+    .ui-price--list .ui-price__discount {
+        font-size: 0.45rem;
+    }
+
+    .ui-price--list .ui-price__installments {
+        font-size: 0.5rem;
+        min-height: 14px;
+    }
+
+    .ui-price--list .ui-price__original {
+        font-size: 0.55rem;
     }
 
     .ui-price--detail .ui-price__current {

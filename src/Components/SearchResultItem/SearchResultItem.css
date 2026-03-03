@@ -53,11 +53,32 @@
     font-size: 0.95rem;
     font-weight: 300;
     color: #333;
-    margin: 0;
     line-height: 1.3;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .search-result-item__image-container {
+        height: 140px;
+        padding: 0.5rem;
+    }
+
+    .search-result-item__content {
+        padding: 0.5rem;
+        gap: 4px;
+    }
+
+    .search-result-item__info-top {
+        min-height: auto;
+    }
+
+    .search-result-item__title {
+        font-size: 0.65rem;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
 }

@@ -7,7 +7,7 @@ import SearchResultItemShipping from './SearchResultItemShipping/SearchResultIte
 import './SearchResultItem.css'
 
 export default function SearchResultItem({ product, isBestSeller }) {
-    const { id, name, price, image, freeShipping, arrivesToday, valoration, ratingCount, originalPrice, installments } = product
+    const { id, name, price, image, freeShipping, arrivesToday, valoration, ratingCount, originalPrice, installments, salesCount } = product
 
     return (
         <Link to={`/product/${id}`} className="search-result-item">
@@ -19,7 +19,7 @@ export default function SearchResultItem({ product, isBestSeller }) {
                 <div className="search-result-item__info-top">
                     <SearchResultItemBadge isBestSeller={isBestSeller} />
                     <h2 className="search-result-item__title">{name}</h2>
-                    <SearchResultItemRating valoration={valoration} ratingCount={ratingCount} />
+                    <SearchResultItemRating valoration={valoration} ratingCount={ratingCount} salesCount={salesCount} />
                 </div>
 
                 <SearchResultItemPrice

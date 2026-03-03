@@ -24,7 +24,7 @@ export default function Search() {
     }, [element, searchProducts, getProductsByCategory])
 
     // Uso el Custom Hook para manejar toda la lógica de filtrado y URL
-    const { filters, handleFilterChange, filteredResults } = useSearchFilters(resultsMatchingSearch)
+    const { filters, handleFilterChange, clearAllFilters, filteredResults } = useSearchFilters(resultsMatchingSearch)
 
     // Identificar el producto más vendido de la lista actual para el badge
     const maxSales = useMemo(() => {
@@ -42,6 +42,7 @@ export default function Search() {
                     resultsCount={filteredResults.length}
                     filters={filters}
                     onFilterChange={handleFilterChange}
+                    onClearAll={clearAllFilters}
                     allProductsInSearch={filteredResults}
                     resultsMatchingSearch={resultsMatchingSearch}
                 />

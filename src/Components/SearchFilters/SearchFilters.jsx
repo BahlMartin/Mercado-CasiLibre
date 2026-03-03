@@ -1,11 +1,24 @@
-import React, { useMemo } from 'react'
+import React, { useMemo, useState, useEffect } from 'react'
 import SearchFilterTag from './SearchFilterTag/SearchFilterTag.jsx'
 import SearchFilterGroup from './SearchFilterGroup/SearchFilterGroup.jsx'
 import SearchFilterList from './SearchFilterList/SearchFilterList.jsx'
 import SearchFilterItem from './SearchFilterItem/SearchFilterItem.jsx'
+import SearchFiltersMobileBar from './SearchFiltersMobileBar/SearchFiltersMobileBar.jsx'
+import SearchFiltersActiveTags from './SearchFiltersActiveTags/SearchFiltersActiveTags.jsx'
+import SearchFiltersModalFooter from './SearchFiltersModalFooter/SearchFiltersModalFooter.jsx'
 import './SearchFilters.css'
 
-export default function SearchFilters({ element, resultsCount, filters = {}, onFilterChange, allProductsInSearch, resultsMatchingSearch }) {
+export default function SearchFilters({ element, resultsCount, filters = {}, onFilterChange, onClearAll, allProductsInSearch, resultsMatchingSearch }) {
+    const [isMobileModalOpen, setIsMobileModalOpen] = useState(false);
+
+    useEffect(() => {
+        if (isMobileModalOpen) {
+            document.body.style.overflow = 'hidden';
+        } else {
+            document.body.style.overflow = 'auto';
+        }
+        return () => { document.body.style.overflow = 'auto'; };
+    }, [isMobileModalOpen]);
 
     // Categorías disponibles basadas solo en los productos que coinciden con la búsqueda (base)
     const availableCategories = useMemo(() => {
@@ -43,97 +56,101 @@ export default function SearchFilters({ element, resultsCount, filters = {}, onF
         return allProductsInSearch.some(p => p.arrivesToday === true) && allProductsInSearch.some(p => p.arrivesToday === false)
     }, [allProductsInSearch, filters.arrivesToday])
 
+    const activeFiltersCount = (filters.category ? 1 : 0) + (filters.freeShipping ? 1 : 0) + (filters.arrivesToday ? 1 : 0) + (filters.priceRange ? 1 : 0);
+
     return (
         <aside className="search-filters">
-            {/* Sección de Cabecera y Filtros Activos */}
-            <SearchFilterGroup title={element} count={resultsCount} isMain={true}>
-                <div className="search-filters__active-container">
-                    {filters.category && (
-                        <SearchFilterTag
-                            label={filters.category.charAt(0).toUpperCase() + filters.category.slice(1)}
-                            onRemove={() => onFilterChange('category', null)}
+            {/* Componente superior horizontal en móbiles */}
+            <SearchFiltersMobileBar
+                setIsMobileModalOpen={setIsMobileModalOpen}
+                activeFiltersCount={activeFiltersCount}
+                showCategoryFilter={!filters.category && availableCategories.length > 1}
+                showPriceFilter={priceRanges.length > 0}
+                showShippingFilter={hasShippingOptions}
+                showArrivesTodayFilter={hasArrivesTodayOptions}
+            />
+
+            {/* Contenedor principal de filtros que se volverá Modal en mobile */}
+            <div className={`search-filters__wrapper ${isMobileModalOpen ? 'search-filters__wrapper--open' : ''}`}>
+                {/* Header del modal mobile */}
+                <div className="search-filters__modal-header">
+                    <span className="search-filters__modal-title">Filtros</span>
+                    <button className="search-filters__modal-close" onClick={() => setIsMobileModalOpen(false)}>
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M18 6 6 18M6 6l12 12" /></svg>
+                    </button>
+                </div>
+
+                <div className="search-filters__scrollable-content">
+                    {/* Sección de Cabecera y Filtros Activos */}
+                    <SearchFilterGroup title={element} count={resultsCount} isMain={true}>
+                        <SearchFiltersActiveTags
+                            filters={filters}
+                            onFilterChange={onFilterChange}
                         />
+                    </SearchFilterGroup>
+
+                    {/* Filtro de Categoría */}
+                    {!filters.category && availableCategories.length > 1 && (
+                        <SearchFilterGroup title="Categorías">
+                            <SearchFilterList>
+                                {availableCategories.map(cat => (
+                                    <SearchFilterItem
+                                        key={cat}
+                                        label={cat.charAt(0).toUpperCase() + cat.slice(1)}
+                                        onClick={() => onFilterChange('category', cat)}
+                                    />
+                                ))}
+                            </SearchFilterList>
+                        </SearchFilterGroup>
                     )}
-                    {filters.freeShipping && (
-                        <SearchFilterTag
-                            label="Envío gratis"
-                            onRemove={() => onFilterChange('freeShipping', false)}
-                        />
+
+                    {/* Filtros de Envío */}
+                    {hasShippingOptions && (
+                        <SearchFilterGroup title="Costo de envío">
+                            <SearchFilterList>
+                                <SearchFilterItem
+                                    label="Envío gratis"
+                                    onClick={() => onFilterChange('freeShipping', true)}
+                                />
+                            </SearchFilterList>
+                        </SearchFilterGroup>
                     )}
-                    {filters.arrivesToday && (
-                        <SearchFilterTag
-                            label="Llega hoy"
-                            onRemove={() => onFilterChange('arrivesToday', false)}
-                        />
+
+                    {/* Filtros de Entrega */}
+                    {hasArrivesTodayOptions && (
+                        <SearchFilterGroup title="Entrega">
+                            <SearchFilterList>
+                                <SearchFilterItem
+                                    label="Llega hoy"
+                                    onClick={() => onFilterChange('arrivesToday', true)}
+                                />
+                            </SearchFilterList>
+                        </SearchFilterGroup>
                     )}
-                    {filters.priceRange && (
-                        <SearchFilterTag
-                            label={
-                                filters.priceRange.max === null
-                                    ? `Más de $${filters.priceRange.min.toLocaleString()}`
-                                    : filters.priceRange.min === 0
-                                        ? `Hasta $${filters.priceRange.max.toLocaleString()}`
-                                        : `$${filters.priceRange.min.toLocaleString()} a $${filters.priceRange.max.toLocaleString()}`
-                            }
-                            onRemove={() => onFilterChange('priceRange', null)}
-                        />
+
+                    {/* Filtros de Precio */}
+                    {priceRanges.length > 0 && (
+                        <SearchFilterGroup title="Precio">
+                            <SearchFilterList>
+                                {priceRanges.map((range, index) => (
+                                    <SearchFilterItem
+                                        key={index}
+                                        label={range.label}
+                                        onClick={() => onFilterChange('priceRange', { min: range.min, max: range.max })}
+                                    />
+                                ))}
+                            </SearchFilterList>
+                        </SearchFilterGroup>
                     )}
                 </div>
-            </SearchFilterGroup>
 
-            {/* Filtro de Categoría */}
-            {!filters.category && availableCategories.length > 1 && (
-                <SearchFilterGroup title="Categorías">
-                    <SearchFilterList>
-                        {availableCategories.map(cat => (
-                            <SearchFilterItem
-                                key={cat}
-                                label={cat.charAt(0).toUpperCase() + cat.slice(1)}
-                                onClick={() => onFilterChange('category', cat)}
-                            />
-                        ))}
-                    </SearchFilterList>
-                </SearchFilterGroup>
-            )}
-
-            {/* Filtros de Envío */}
-            {hasShippingOptions && (
-                <SearchFilterGroup title="Costo de envío">
-                    <SearchFilterList>
-                        <SearchFilterItem
-                            label="Envío gratis"
-                            onClick={() => onFilterChange('freeShipping', true)}
-                        />
-                    </SearchFilterList>
-                </SearchFilterGroup>
-            )}
-
-            {/* Filtros de Entrega */}
-            {hasArrivesTodayOptions && (
-                <SearchFilterGroup title="Entrega">
-                    <SearchFilterList>
-                        <SearchFilterItem
-                            label="Llega hoy"
-                            onClick={() => onFilterChange('arrivesToday', true)}
-                        />
-                    </SearchFilterList>
-                </SearchFilterGroup>
-            )}
-
-            {/* Filtros de Precio */}
-            {priceRanges.length > 0 && (
-                <SearchFilterGroup title="Precio">
-                    <SearchFilterList>
-                        {priceRanges.map((range, index) => (
-                            <SearchFilterItem
-                                key={index}
-                                label={range.label}
-                                onClick={() => onFilterChange('priceRange', { min: range.min, max: range.max })}
-                            />
-                        ))}
-                    </SearchFilterList>
-                </SearchFilterGroup>
-            )}
+                {/* Footer sticky del modal mobile */}
+                <SearchFiltersModalFooter
+                    onClearAll={onClearAll}
+                    setIsMobileModalOpen={setIsMobileModalOpen}
+                    resultsCount={resultsCount}
+                />
+            </div>
         </aside>
     )
 }

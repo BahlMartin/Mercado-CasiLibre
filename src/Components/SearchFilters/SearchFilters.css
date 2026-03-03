@@ -6,11 +6,11 @@
     gap: 1.5rem;
 }
 
-.search-filters__active-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-    margin-top: 5px;
+
+
+/* Ocultar elementos móviles por defecto en escritorio */
+.search-filters__modal-header {
+    display: none;
 }
 
 /* ── Tablet (768px – 1024px) ─────────────────────────── */
@@ -25,14 +25,64 @@
 @media (max-width: 480px) {
     .search-filters {
         width: 100%;
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 0.5rem;
+        display: block;
     }
 
-    .search-filters__active-container {
-        flex-direction: row;
-        flex-wrap: wrap;
-        margin-top: 0;
+
+
+    /* Ocultamos los filtros normales por defecto */
+    .search-filters__wrapper {
+        display: none;
     }
+
+    /* Layout Modal */
+    .search-filters__wrapper--open {
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        inset: auto 0 0 0;
+        background-color: #fff;
+        z-index: 1000;
+        width: 100vw;
+        height: 75vh;
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .search-filters__modal-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        border-bottom: 1px solid #eee;
+        background-color: #fff;
+    }
+
+    .search-filters__modal-title {
+        font-size: 1.1rem;
+        font-weight: 600;
+        color: #333;
+    }
+
+    .search-filters__modal-close {
+        background: none;
+        border: none;
+        color: #666;
+        cursor: pointer;
+        padding: 4px;
+        display: flex;
+        align-items: center;
+    }
+
+    .search-filters__scrollable-content {
+        flex: 1;
+        overflow-y: auto;
+        padding: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+
 }

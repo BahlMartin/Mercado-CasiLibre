@@ -1,0 +1,14 @@
+.search-filters__active-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 5px;
+}
+
+@media (max-width: 480px) {
+    .search-filters__active-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+        margin-top: 0;
+    }
+}

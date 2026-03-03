@@ -31,3 +31,24 @@
 .search-result-item__shipping-placeholder {
     height: 25px;
 }
+
+@media (max-width: 480px) {
+    .search-result-item__footer {
+        margin-top: 4px;
+        min-height: 18px;
+    }
+
+    .search-result-item__shipping-placeholder {
+        height: 14px;
+    }
+
+    .search-result-item__shipping-badge {
+        font-size: 0.5rem;
+        padding: 1px 4px;
+        border-radius: 2px;
+    }
+
+    .search-result-item__shipping-badge--free {
+        font-size: 0.55rem;
+    }
+}
