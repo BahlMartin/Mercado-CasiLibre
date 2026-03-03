@@ -43,12 +43,19 @@
 }
 
 /* ── Mobile (≤ 480px) ────────────────────────────────── */
-@media (max-width: 480px) {
+@media (max-width: 600px) {
     .navbar__subbar {
         padding: 6px 10px;
     }
 
     .navbar__location {
+        display: none;
+    }
+}
+
+/* ── Tablet (601px – 850px) ─────────────────────────── */
+@media (min-width: 601px) and (max-width: 850px) {
+    .navbar__text--tertiary {
         display: none;
     }
 }

@@ -10,8 +10,10 @@ export default function NavBar() {
   return (
     <>
       <header className="navbar">
-        <NavBarTop onMenuOpen={() => setIsDrawerOpen(true)} />
-        <NavBarSub />
+        <div className="navbar__container">
+          <NavBarTop onMenuOpen={() => setIsDrawerOpen(true)} />
+          <NavBarSub />
+        </div>
       </header>
       <MobileDrawer
         isOpen={isDrawerOpen}

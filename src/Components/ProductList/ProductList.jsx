@@ -4,7 +4,7 @@ import Carousel from '../Carousel/Carousel.jsx'
 
 
 
-export default function ProductList({title,products}) {
+export default function ProductList({ title, products }) {
 
   return (
     <section className="product-list">
@@ -21,7 +21,7 @@ export default function ProductList({title,products}) {
       </div>
 
       <div className="product-list__mobile">
-        {products.slice(0, 4).map((product, index) => (
+        {products.slice(0, 6).map((product, index) => (
           <ProductCard key={`${product.id}-mobile-${index}`} product={product} />
         ))}
       </div>
