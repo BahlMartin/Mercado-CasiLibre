@@ -30,7 +30,7 @@
   outline-offset: 2px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 670px) {
   .product-card {
     min-width: 0;
     max-width: none;

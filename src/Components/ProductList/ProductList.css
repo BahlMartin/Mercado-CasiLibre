@@ -23,6 +23,12 @@
   display: none;
 }
 
+@media (min-width: 601px) {
+  .product-list {
+    width: 90%;
+  }
+}
+
 @media (max-width: 670px) {
   .product-list {
     max-height: none;
@@ -36,19 +42,14 @@
   .product-list__mobile {
     display: grid;
     gap: 8px;
-  }
-
-  .product-card {
-    width: 100%;
-  }
-}
-
-@media (max-width: 480px) {
-  .product-list__mobile {
     grid-template-columns: repeat(2, 1fr);
   }
 
   .product-list__mobile> :nth-child(n+5) {
     display: none;
+  }
+
+  .product-card {
+    width: 100%;
   }
 }
