@@ -126,6 +126,9 @@
     }
 
     /* Reducciones para la vista de lista (SearchResultItem) en móviles */
+}
+
+@media (max-width: 750px) {
     .ui-price--list {
         gap: 0;
     }
@@ -150,7 +153,9 @@
     .ui-price--list .ui-price__original {
         font-size: 0.55rem;
     }
+}
 
+@media (max-width: 480px) {
     .ui-price--detail .ui-price__installments {
         font-size: 0.75rem;
     }

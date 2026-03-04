@@ -21,8 +21,8 @@
     }
 }
 
-/* ── Mobile (≤ 480px) ────────────────────────────────── */
-@media (max-width: 480px) {
+/* ── Mobile & Tablet (≤ 750px) ────────────────────────────────── */
+@media (max-width: 750px) {
     .search-filters {
         width: 100%;
         display: block;

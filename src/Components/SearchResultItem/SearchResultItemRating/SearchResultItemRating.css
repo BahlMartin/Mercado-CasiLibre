@@ -21,7 +21,7 @@
     display: none;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
 
     /* Ocultar el componente de 5 estrellas de React en móvil */
     .search-result-item__rating-stars--desktop {

@@ -16,8 +16,8 @@ export default function SearchFiltersMobileBar({
     if (showShippingFilter) availablePills.push('Envío gratis');
     if (showArrivesTodayFilter) availablePills.push('Llega hoy');
 
-    // Mostrar un máximo de 2 píldoras adicionales antes del botón principal "Filtros"
-    const pillsToShow = availablePills.slice(0, 2);
+    // Mostrar un máximo de 3 píldoras adicionales antes del botón principal "Filtros"
+    const pillsToShow = availablePills.slice(0, 3);
 
     return (
         <div className="search-filters__mobile-bar">

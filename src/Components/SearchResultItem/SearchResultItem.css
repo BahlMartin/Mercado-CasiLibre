@@ -61,7 +61,7 @@
     overflow: hidden;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 750px) {
     .search-result-item__image-container {
         height: 140px;
         padding: 0.5rem;
