@@ -19,8 +19,8 @@
 /* ── Tablet (768px – 1024px) ─────────────────────────── */
 @media (max-width: 1024px) {
     .navbar__categories-list {
-        gap: 10px;
-        font-size: 13px;
+        gap: 15px;
+        font-size: 15px;
     }
 }
 
