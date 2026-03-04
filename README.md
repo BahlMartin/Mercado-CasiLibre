@@ -3,6 +3,14 @@
 ## Descripción del Proyecto
 Este proyecto es un clon de la interfaz (mockup) del popular sitio de e-commerce MercadoLibre, desarrollado íntegramente utilizando React. El objetivo principal de la aplicación es recrear la experiencia de navegación, búsqueda, visualización de productos y el flujo del carrito de compras, manteniendo la estética visual característica de la plataforma.
 
+### Sobre el Desafío Elegido
+Se optó por este desafío dada la complejidad inherente de replicar un e-commerce masivo. Esto permitió poner a prueba la estructuración de componentes altamente reutilizables, la administración de estados globales para múltiples flujos de compra (Carrito, Productos, Chatbot) y la sincronización de parámetros de búsqueda (`useSearchParams`) para filtros avanzados.
+
+### Dificultades Presentadas
+Durante el desarrollo, los retos principales radicaron en:
+1. **Armado Responsivo Multi-Dispositivo**: Asegurar que un layout rico en contenido no colapsara en resoluciones mínimas *(hasta 320px)* mientras se mantenía simétrico en grandes monitores *(+2000px)* requirió ajustar meticulosamente Flexbox, Grids y una amplia gama de Media Queries personalizados.
+2. **Sistema de Filtros**: Parametrizar dinámicamente cruces de filtros (envíos rápidos, envíos gratis, precios y categorías) utilizando las URLs del Router obligó a diseñar el custom hook avanzado `useSearchFilters` para abstraer la lógica sucia fuera de los componentes visuales.
+
 ---
 
 ## Limitaciones del Proyecto
