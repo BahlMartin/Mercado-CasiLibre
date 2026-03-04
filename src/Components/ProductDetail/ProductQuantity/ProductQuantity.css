@@ -104,6 +104,28 @@
     font-size: 0.9rem;
 }
 
+@media (min-width: 480px) and (max-width: 767px) {
+    .product-quantity__title {
+        font-size: 1.4rem;
+    }
+
+    .product-quantity__selector {
+        font-size: 1.35rem;
+    }
+
+    .product-quantity__select {
+        font-size: 1.35rem;
+    }
+
+    .product-quantity__available {
+        font-size: 1.15rem;
+    }
+
+    .product-quantity__last-available {
+        font-size: 1.25rem;
+    }
+}
+
 
 
 @media (max-width: 418px) {

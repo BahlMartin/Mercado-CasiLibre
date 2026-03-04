@@ -11,9 +11,9 @@
 
 /* Navegacion superior (Volver y breadcrumbs) */
 .product-detail__nav {
-    width: calc(100% - 2rem);
+    width: 95%;
     max-width: 1180px;
-    margin-bottom: 12px;
+    margin: 0 auto 12px auto;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -49,10 +49,10 @@
     border-radius: 4px;
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, .15);
     max-width: 1180px;
-    width: calc(100% - 2rem);
+    width: 95%;
+    margin: 0 auto 2rem auto;
     display: flex;
     flex-direction: column;
-    margin-bottom: 2rem;
 }
 
 .product-detail__card-inner {

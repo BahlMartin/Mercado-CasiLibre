@@ -22,3 +22,9 @@
 .product-guarantees__item span {
     color: #3483fa;
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .product-guarantees__item {
+        font-size: 1.25rem;
+    }
+}

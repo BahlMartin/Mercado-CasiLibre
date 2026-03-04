@@ -57,3 +57,25 @@
     color: #00a650;
     font-weight: 500;
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .product-info__subtitle {
+        font-size: 1.15rem;
+    }
+
+    .product-info__title {
+        font-size: 1.85rem;
+    }
+
+    .product-info__rating-number {
+        font-size: 1.25rem;
+    }
+
+    .product-info__rating-reviews {
+        font-size: 1.15rem;
+    }
+
+    .product-info__installments {
+        font-size: 1.25rem;
+    }
+}

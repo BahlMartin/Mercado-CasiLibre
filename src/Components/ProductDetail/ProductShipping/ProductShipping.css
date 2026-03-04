@@ -13,3 +13,9 @@
         font-size: 0.85rem;
     }
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+    .product-shipping__text {
+        font-size: 1.25rem;
+    }
+}
