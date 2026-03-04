@@ -9,6 +9,20 @@
     color: #333;
 }
 
+/* ── Mobile & Tablet Scaling (≤ 1024px) ─────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cart-item-price__amount {
+        font-size: 22px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .cart-item-price__amount {
+        font-size: 18px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ─────────────────────────────────── */
 @media (max-width: 480px) {
     .cart-item-price__amount {
         font-size: 16px;

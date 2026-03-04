@@ -9,3 +9,26 @@
     height: 100%;
     object-fit: contain;
 }
+
+/* ── Mobile & Tablet Scaling (≤ 1024px) ─────────────────── */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .cart-item-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 767px) {
+    .cart-item-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* ── Mobile (≤ 480px) ─────────────────────────────────── */
+@media (max-width: 480px) {
+    .cart-item-image {
+        width: 60px;
+        height: 60px;
+    }
+}
